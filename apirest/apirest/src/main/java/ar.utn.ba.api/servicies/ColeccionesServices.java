@@ -21,27 +21,21 @@ public class ColeccionesServices implements IColeccionService {
 
     private ColeccionDto ColeccionDto(Coleccion cole) {
         ColeccionDto coleout=new ColeccionDto();
-        coleout.setNombre(cole.getName());
+        coleout.setTitulo(cole.getTitulo());
+        coleout.setDescripcion(cole.getDescripcion());
+        coleout.setHandle(cole.getHandle());
+        coleout.setFuente(String.valueOf(cole.getFuente()));
         return coleout;
     }
 
 
-    public void addFuente(Long idCole, String rutaFuente){
-
-
-
-
-    }
 
     @Override
     public void agregar(Coleccion coleccion) {
-
+        this.colecciones.save(coleccion);
     }
 
-    @Override
-    public List<Coleccion> obtenerTodos() {
-        return List.of();
-    }
+
 
     @Override
     public Coleccion encontrarPorId(Long id) {

@@ -1,14 +1,18 @@
 package ar.utn.ba.api.models.entities;
 
+import lombok.Data;
+
+import java.util.List;
+
+@Data
 public class Coleccion {
 
-    private String name ;
+    private String handle;
+    private String titulo;
+    private String descripcion;
+    private Fuente fuente;
+    private List<InterfaceCondicion> criterioDePertenencia;
+    //private List<Hecho> hechos;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

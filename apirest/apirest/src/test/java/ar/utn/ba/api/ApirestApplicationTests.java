@@ -1,4 +1,4 @@
-package ar.utn.ba.dds.apirest;
+package ar.utn.ba.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -10,11 +10,14 @@ import java.util.List;
 public class ColeccionRepositoryMemo implements IColeccionRepository {
 
     private List<Coleccion> colecciones;
+    private Integer numero =0 ;
 
 
     @Override
     public void save(Coleccion coleccion) {
-
+        this.numero+=1;
+        coleccion.setHandle("Alfanumerico " + String.valueOf(this.numero));
+        this.colecciones.add(coleccion);
     }
 
     @Override
